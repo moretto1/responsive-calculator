@@ -3,82 +3,85 @@
     <head>
         <title>Responsive Calculator</title>
         <link rel="stylesheet" type="text/css" href="calculadora.css">
+        <script src="calculadora.js"></script>
     </head>
     <body>
-        <div style="display: flex; flex-direction: column; background-color: black; color: white; width: 600px;">
-            <div class="number-display">
-                123
-            </div>
-            <div class="buttons">
-                <div class="button-line">
-                    <div>
-                        AC
-                    </div>
-                    <div>
-                        +/-
-                    </div>
-                    <div>
-                        %
-                    </div>
-                    <div class="action-button">
-                        /
-                    </div>
+        <div class="outter-container">
+            <div class="container">
+                <div class="number-display" id="number-display">
+                    0
                 </div>
-                <br/>
-                <div class="button-line">
-                    <div>
-                        7
+                <div class="buttons">
+                    <div class="button-line">
+                        <div onclick="cleanStack()">
+                            AC
+                        </div>
+                        <div onclick="pushSignal()">
+                            +/-
+                        </div>
+                        <div onclick="pushPercent()">
+                            %
+                        </div>
+                        <div id="div-op" class="action-button" onclick="pushOp('/')">
+                            <b>/</b>
+                        </div>
                     </div>
-                    <div>
-                        8
+                    
+                    <div class="button-line">
+                        <div onclick="pushNumber(7)">
+                            7
+                        </div>
+                        <div onclick="pushNumber(8)">
+                            8
+                        </div>
+                        <div onclick="pushNumber(9)">
+                            9
+                        </div>
+                        <div id="mult-op" class="action-button" onclick="pushOp('*')">
+                            <b>X</b>
+                        </div>
                     </div>
-                    <div>
-                        9
+                    
+                    <div class="button-line">
+                        <div onclick="pushNumber(4)">
+                            4
+                        </div>
+                        <div onclick="pushNumber(5)">
+                            5
+                        </div>
+                        <div onclick="pushNumber(6)">
+                            6
+                        </div>
+                        <div id="sub-op" class="action-button" onclick="pushOp('-')">
+                            <b>-</b>
+                        </div>
                     </div>
-                    <div class="action-button">
-                        X
+                    
+                    <div class="button-line">
+                        <div onclick="pushNumber(1)">
+                            1
+                        </div>
+                        <div onclick="pushNumber(2)">
+                            2
+                        </div>
+                        <div onclick="pushNumber(3)">
+                            3
+                        </div>
+                        <div id="add-op" class="action-button" onclick="pushOp('+')">
+                            <b>+</b>
+                        </div>
                     </div>
-                </div>
-                <br/>
-                <div class="button-line">
-                    <div>
-                        4
-                    </div>
-                    <div>
-                        5
-                    </div>
-                    <div>
-                        6
-                    </div>
-                    <div class="action-button">
-                        -
-                    </div>
-                </div>
-                <br/>
-                <div class="button-line">
-                    <div>
-                        1
-                    </div>
-                    <div>
-                        2
-                    </div>
-                    <div>
-                        3
-                    </div>
-                    <div class="action-button">
-                        +
-                    </div>
-                </div>
-                <br/>
-                <div class="button-line">
-                    <div class="large-button">
-                        0
-                    </div>
-                    <div>
-                        ,
-                    </div>
-                    <div class="action-button">
-                        =
+                    
+                    <div class="button-line">
+                        <div class="large-button" onclick="pushNumber(0)">
+                            <span>0</span>
+                        </div>
+                        <div onclick="pushPoint('.')">
+                            .
+                        </div>
+                        <div class="action-button" onclick="result()">
+                            <b>=</b>
+                        </div>
                     </div>
                 </div>
             </div>
