@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Responsive Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="calculadora.css">
         <script src="calculadora.js"></script>
     </head>
@@ -13,13 +14,13 @@
                 </div>
                 <div class="buttons">
                     <div class="button-line">
-                        <div onclick="cleanStack()">
+                        <div class="gray-button" onclick="cleanStack()">
                             AC
                         </div>
-                        <div onclick="pushSignal()">
+                        <div class="gray-button" onclick="pushSignal()">
                             +/-
                         </div>
-                        <div onclick="pushPercent()">
+                        <div class="gray-button" onclick="pushPercent()">
                             %
                         </div>
                         <div id="div-op" class="action-button" onclick="pushOp('/')">

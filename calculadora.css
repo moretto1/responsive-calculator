@@ -1,20 +1,27 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'sans-serif';
     font-size: 1.6rem;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .outter-container {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     display: flex;
+    background-color: #000000;
     place-content: center;
 }
 
 .container {
     display: flex; 
-    flex-direction: column; 
-    background-color: black; 
-    color: white; 
+    flex-direction: column;  
+    color: #e4e4e4; 
     width: 600px; 
     justify-content: center; 
     align-items: center;
@@ -49,7 +56,7 @@
     width: 100px; 
     height: 100px; 
     border-radius:100%; 
-    background-color: #333634;
+    background-color: #343434;
     margin: 12px;
     cursor: pointer;
 }
@@ -75,10 +82,15 @@
     width: 100px; 
     height: 100px; 
     border-radius: 60px; 
-    background-color: orange;
+    background-color: #ff9601;
+}
+
+.buttons > .button-line > .gray-button {
+    background-color: #a7a6a7;
+    color: #141414;
 }
 
 .action-button-active {
-    background-color: white !important;
-    color: orange;
+    background-color: #e4e4e4 !important;
+    color: #ff9601;
 }
