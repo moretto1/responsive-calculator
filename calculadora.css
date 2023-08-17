@@ -1,0 +1,51 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.number-display {
+    height: 150px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.buttons {
+    padding: 10px;
+}
+
+.button-line {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.buttons > .button-line > div {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100px; 
+    height: 100px; 
+    border-radius:100%; 
+    background-color: #333634;
+}
+
+.buttons > .button-line > .large-button {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 225px; 
+    height: 100px; 
+    border-radius: 60px; 
+    background-color: #333634;
+}
+
+.buttons > .button-line > .action-button {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 60px; 
+    background-color: orange;
+}
