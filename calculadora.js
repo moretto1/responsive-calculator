@@ -52,6 +52,8 @@ const removeActionButtonClass = operation => {
     }
 }
 
+const removeLargeResultClass = () => document.getElementById('number-display').classList.remove('large-result');
+
 const pushOp = value => {
     isResult = false;
     removeActionButtonClass(lastOp);
@@ -82,6 +84,8 @@ const pushNumber = value => {
         isResult = false;
         stack = [0];
     }
+    
+    removeLargeResultClass();
 
     if (!isFloatNumber(stack[0]) && stack.length === 1 || isAnOperationSign(lastStackValue)) {
         stack.push(value); 
@@ -107,6 +111,7 @@ const pushPoint = () => {
     if (isAnOperationSign(lastStackValue)) {
         value = 0 + '.'
         stack.push(value);
+        removeLargeResultClass();
     } else {
         value = lastStackValue + '.';
         stack.splice(lastStackIndex, 1, value);
@@ -126,6 +131,7 @@ const pushPercent = () => {
 
     const result = lastStackValue/100;
     stack.splice(lastStackIndex, 1, result);
+    
     updateDisplayNumber(result);
 }
 
@@ -143,7 +149,6 @@ const pushSignal = () => {
     updateDisplayNumber(result);
 }
 
-// TODO tratar grandes números
 const calculate = () => {
     let op = '';
     stack.forEach(value => {
@@ -162,7 +167,13 @@ const result = () => {
         stack.splice(0, 1);
     }
 
-    const result = calculate();
+    let result = calculate();
+    
+    if (result.toString().includes('.') && result.toString().length > 9) {
+        result = result.toString().slice(0, 10);
+        document.getElementById('number-display').classList.add('large-result');
+    }
+
     stack = [result];
     isResult = true;
     removeActionButtonClass(lastOp);
