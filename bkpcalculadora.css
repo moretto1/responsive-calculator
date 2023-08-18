@@ -42,11 +42,9 @@ body, html {
 .buttons {
     padding: 10px;
     user-select: none;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
 }
 
-/* .button-line {
+.button-line {
     display: flex;
     flex-direction: row;
 }
@@ -96,4 +94,3 @@ body, html {
     background-color: #e4e4e4 !important;
     color: #ff9601;
 }
- */

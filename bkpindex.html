@@ -3,7 +3,7 @@
     <head>
         <title>Responsive Calculator</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="calculadora2.css">
+        <link rel="stylesheet" type="text/css" href="calculadora.css">
         <script src="calculadora.js"></script>
     </head>
     <body>
@@ -13,7 +13,7 @@
                     0
                 </div>
                 <div class="buttons">
-                    
+                    <div class="button-line">
                         <div class="gray-button" onclick="cleanStack()">
                             AC
                         </div>
@@ -26,9 +26,9 @@
                         <div id="div-op" class="action-button" onclick="pushOp('/')">
                             <b>/</b>
                         </div>
+                    </div>
                     
-                    
-                    
+                    <div class="button-line">
                         <div onclick="pushNumber(7)">
                             7
                         </div>
@@ -41,9 +41,9 @@
                         <div id="mult-op" class="action-button" onclick="pushOp('*')">
                             <b>X</b>
                         </div>
+                    </div>
                     
-                    
-                    
+                    <div class="button-line">
                         <div onclick="pushNumber(4)">
                             4
                         </div>
@@ -56,9 +56,9 @@
                         <div id="sub-op" class="action-button" onclick="pushOp('-')">
                             <b>-</b>
                         </div>
+                    </div>
                     
-                    
-                    
+                    <div class="button-line">
                         <div onclick="pushNumber(1)">
                             1
                         </div>
@@ -71,9 +71,9 @@
                         <div id="add-op" class="action-button" onclick="pushOp('+')">
                             <b>+</b>
                         </div>
+                    </div>
                     
-                    
-                    
+                    <div class="button-line">
                         <div class="large-button" onclick="pushNumber(0)">
                             <span>0</span>
                         </div>
@@ -83,7 +83,7 @@
                         <div class="action-button" onclick="result()">
                             <b>=</b>
                         </div>
-                    
+                    </div>
                 </div>
             </div>
         </div>

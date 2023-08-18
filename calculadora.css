@@ -42,26 +42,25 @@ body, html {
 .buttons {
     padding: 10px;
     user-select: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 16px;
 }
 
-.button-line {
-    display: flex;
-    flex-direction: row;
-}
-
-.buttons > .button-line > div {
+.buttons > div {
     display: flex; 
     justify-content: center; 
     align-items: center; 
     width: 100px; 
     height: 100px; 
-    border-radius:100%; 
+    border-radius: 100%; 
     background-color: #343434;
-    margin: 12px;
     cursor: pointer;
 }
 
-.buttons > .button-line > .large-button {
+.buttons > .large-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
     display: flex; 
     justify-content: start;
     align-items: center; 
@@ -71,11 +70,11 @@ body, html {
     background-color: #333634;
 }
 
-.buttons > .button-line > .large-button > span {
+.buttons > .large-button > span {
     padding-left: 40px;
 }
 
-.buttons > .button-line > .action-button {
+.buttons > .action-button {
     display: flex; 
     justify-content: center; 
     align-items: center; 
@@ -85,7 +84,7 @@ body, html {
     background-color: #ff9601;
 }
 
-.buttons > .button-line > .gray-button {
+.buttons > .gray-button {
     background-color: #a7a6a7;
     color: #141414;
 }
@@ -93,4 +92,70 @@ body, html {
 .action-button-active {
     background-color: #e4e4e4 !important;
     color: #ff9601;
+}
+
+@media (max-width: 650px) {
+    * {
+        font-size: 1.4rem;
+    }
+
+    .buttons {
+        gap: 12px;
+    }
+
+    .buttons > div {
+        width: 70px; 
+        height: 70px; 
+    }
+
+    .buttons > .large-button {
+        width: 155px; 
+        height: 70px; 
+    }
+
+    .buttons > .action-button {
+        width: 70px; 
+        height: 70px; 
+    }
+
+    .buttons > .large-button > span {
+        padding-left: 30px;
+    }
+
+    .number-display {
+        height: 150px;
+        width: 300px;
+    }
+    
+}
+
+@media (max-width: 372px) {
+    * {
+        font-size: 1.3rem;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .buttons > div {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .buttons > .large-button {
+        width: 130px; 
+        height: 60px; 
+    }
+
+    .buttons > .action-button {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .number-display {
+        height: 150px;
+        width: 252px;
+    }
+    
 }
