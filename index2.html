@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="calculadora2.css">
+        <script src="calculadora.js"></script>
+    </head>
+    <body>
+        <div class="outter-container">
+            <div class="container">
+                <div class="number-display" id="number-display">
+                    0
+                </div>
+                <div class="buttons">
+                    
+                        <div class="gray-button" onclick="cleanStack()">
+                            AC
+                        </div>
+                        <div class="gray-button" onclick="pushSignal()">
+                            +/-
+                        </div>
+                        <div class="gray-button" onclick="pushPercent()">
+                            %
+                        </div>
+                        <div id="div-op" class="action-button" onclick="pushOp('/')">
+                            <b>/</b>
+                        </div>
+                    
+                    
+                    
+                        <div onclick="pushNumber(7)">
+                            7
+                        </div>
+                        <div onclick="pushNumber(8)">
+                            8
+                        </div>
+                        <div onclick="pushNumber(9)">
+                            9
+                        </div>
+                        <div id="mult-op" class="action-button" onclick="pushOp('*')">
+                            <b>X</b>
+                        </div>
+                    
+                    
+                    
+                        <div onclick="pushNumber(4)">
+                            4
+                        </div>
+                        <div onclick="pushNumber(5)">
+                            5
+                        </div>
+                        <div onclick="pushNumber(6)">
+                            6
+                        </div>
+                        <div id="sub-op" class="action-button" onclick="pushOp('-')">
+                            <b>-</b>
+                        </div>
+                    
+                    
+                    
+                        <div onclick="pushNumber(1)">
+                            1
+                        </div>
+                        <div onclick="pushNumber(2)">
+                            2
+                        </div>
+                        <div onclick="pushNumber(3)">
+                            3
+                        </div>
+                        <div id="add-op" class="action-button" onclick="pushOp('+')">
+                            <b>+</b>
+                        </div>
+                    
+                    
+                    
+                        <div class="large-button" onclick="pushNumber(0)">
+                            <span>0</span>
+                        </div>
+                        <div onclick="pushPoint('.')">
+                            .
+                        </div>
+                        <div class="action-button" onclick="result()">
+                            <b>=</b>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
