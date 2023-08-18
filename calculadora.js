@@ -10,6 +10,7 @@ const cleanStack = () => {
     stack = [0];
     updateDisplayNumber(0);
     removeActionButtonClass(lastOp);
+    removeLargeResultClass();
 }
 const isAnOperationSign = value => operationSigns.includes(value);
 const isFloatNumber = value => value.toString().includes('.');
